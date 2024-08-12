@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @Log4j2
 public class CustomExceptionHandler {
 
+    // ira repotar erro para usuario de forma simplificada para usuario
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<String> handleCustomException(CustomException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
